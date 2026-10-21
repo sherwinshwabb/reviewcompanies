@@ -1,0 +1,11 @@
+import { chromium } from "/Volumes/T9-Citadel/repos/second-review-site/node_modules/playwright/index.mjs";
+import { pathToFileURL } from "node:url";
+const [,, html, out, w, h] = process.argv;
+const browser = await chromium.launch({ executablePath: process.env.CHROME_EXE });
+const page = await browser.newPage({ viewport: { width: +w, height: +h }, deviceScaleFactor: 2 });
+await page.goto(pathToFileURL(html).href, { waitUntil: "networkidle" });
+await page.evaluate(() => document.fonts.ready);
+await page.waitForTimeout(300);
+await page.screenshot({ path: out, type: "png", clip: { x: 0, y: 0, width: +w, height: +h } });
+await browser.close();
+console.log("wrote", out);
