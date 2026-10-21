@@ -26,7 +26,7 @@ export function organizationSchema(): Json {
     url: siteSettings.origin,
     logo: {
       "@type": "ImageObject",
-      url: siteUrl("/brand/logo.png"),
+      url: siteUrl("/brand/ratetopcompanies-logo.png"),
     },
     description:
       "Company reviews and practical comparisons across gold, mortgages, banking, credit, investing, debt relief, and legal services.",

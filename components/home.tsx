@@ -160,7 +160,7 @@ export function Home() {
             About our editorial approach <Icon name="arrow" size={18} />
           </Link>
           <div className="editorial-signature">
-            Review Top Companies Editorial Team
+            Rate Top Companies Editorial Team
           </div>
         </div>
       </section>

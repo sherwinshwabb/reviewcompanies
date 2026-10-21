@@ -1,5 +1,5 @@
 {
-  "source": "../reviewtopcompanies",
+  "source": "../ratetopcompanies",
   "migrated": "2026-10-21",
   "files": [
     {
@@ -19,7 +19,7 @@
     },
     {
       "path": "lib/policies.ts",
-      "sha256": "a9aa97501afc68521ca8b6cf227483dd2166aeb5396c93fb8567f0c7f326643c",
+      "sha256": "d7b74035f0968ebc1604fe3e87c9106a685a5dd8906156776d0b99497419e8c8",
       "identicalToSource": false,
       "note": "Publisher-identity placeholder text revised on 2026-10-21; company and ranking data unchanged."
     },
@@ -115,12 +115,12 @@
   "additionalSourceReferences": [
     {
       "path": "docs/company-brand-sources.json",
-      "source": "../reviewtopcompanies/docs/company-brand-sources.json",
+      "source": "../ratetopcompanies/docs/company-brand-sources.json",
       "sha256": "67978e0869f7445f15c12fcfc05a013eafe5c4ea580aff01fe6a794bf1aa891a"
     },
     {
       "path": "docs/original-project-reference.md",
-      "source": "../reviewtopcompanies/README.md",
+      "source": "../ratetopcompanies/README.md",
       "sha256": "610e9e31d8257ae782f82da793ac9f1a4efed5f09e67fd2836295b3ed656a4be"
     }
   ]

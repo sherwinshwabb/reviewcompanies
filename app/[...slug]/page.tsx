@@ -133,7 +133,7 @@ export default async function ContentPage({
               <h2>Our shared editorial byline</h2>
               <p>
                 Comparison guides, company profiles, and practical articles use
-                the Review Top Companies Editorial Team byline. The research
+                the Rate Top Companies Editorial Team byline. The research
                 reference identifies the source material behind a page;
                 substantive revisions should be reflected in the page’s dates
                 and supporting sources.

@@ -1,6 +1,6 @@
 # SEO audit and overhaul — October 21, 2026
 
-This document records the audit of the Review Top Companies site, the competitive research that shaped the rewrite, the keyword map for every service-type page, and the technical changes made. Everything on-page can be traced back to `lib/seo.ts`, `lib/page-meta.ts`, and `lib/schema.ts`.
+This document records the audit of the Rate Top Companies site, the competitive research that shaped the rewrite, the keyword map for every service-type page, and the technical changes made. Everything on-page can be traced back to `lib/seo.ts`, `lib/page-meta.ts`, and `lib/schema.ts`.
 
 ## 1. What the audit found
 
@@ -79,7 +79,7 @@ Company reviews: `{Company} Review 2026: {category suffix}` with a description b
 
 ## 6. Launch checklist
 
-1. Set `SITE_URL=https://reviewtopcompanies.com`, `SITE_INDEXING_ENABLED=true`, and `SITE_APPROVED_PATHS=all` (or an explicit list) in the production environment.
+1. Set `SITE_URL=https://ratetopcompanies.com`, `SITE_INDEXING_ENABLED=true`, and `SITE_APPROVED_PATHS=all` (or an explicit list) in the production environment.
 2. Submit `/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 3. Validate three page types in Google's Rich Results Test: a category page (CollectionPage/ItemList, FAQPage, BreadcrumbList), a review (Article), and a guide (Article).
 4. Validate social previews with the Facebook Sharing Debugger and X Card Validator using `/og/<path>` images.

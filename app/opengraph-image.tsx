@@ -2,11 +2,11 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 export const alt =
-  "Review Top Companies — Big decisions. A clearer starting point.";
+  "Rate Top Companies — Big decisions. A clearer starting point.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default async function Image() {
-  const logo = await readFile(join(process.cwd(), "public/brand/logo.png"));
+  const logo = await readFile(join(process.cwd(), "public/brand/ratetopcompanies-logo.png"));
   return new ImageResponse(
     <div
       style={{
@@ -22,9 +22,9 @@ export default async function Image() {
     >
       <img
         src={`data:image/png;base64,${logo.toString("base64")}`}
-        alt="Review Top Companies"
+        alt="Rate Top Companies"
         width={680}
-        height={75}
+        height={78}
       />
       <div
         style={{

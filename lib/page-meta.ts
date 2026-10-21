@@ -102,8 +102,8 @@ export function resolvePageMeta(path: string): PageMeta | null {
       title: fixed.metaTitle,
       description: fixed.metaDescription,
       eyebrow: isDirectory
-        ? "Review Top Companies"
-        : (policyPages[parts[1]]?.eyebrow ?? "Review Top Companies"),
+        ? "Rate Top Companies"
+        : (policyPages[parts[1]]?.eyebrow ?? "Rate Top Companies"),
     };
   }
   return null;

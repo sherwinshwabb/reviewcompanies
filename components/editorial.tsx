@@ -20,7 +20,7 @@ export function EditorialByline({
       </span>
       <div>
         <Link href="/about#editorial-team">
-          Review Top Companies Editorial Team
+          Rate Top Companies Editorial Team
         </Link>
         <span>
           {kind}
@@ -41,7 +41,7 @@ export function EditorialTeam() {
   return (
     <section id="editorial-team" className="editorial-team-section">
       <span className="eyebrow">OUR EDITORIAL APPROACH</span>
-      <h2>The Review Top Companies Editorial Team</h2>
+      <h2>The Rate Top Companies Editorial Team</h2>
       <p>
         Our guides and comparisons are published under a shared editorial
         byline. The focus is practical: the services a company offers, the costs

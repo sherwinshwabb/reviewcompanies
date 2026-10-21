@@ -9,9 +9,9 @@ export const policies: Record<
 > = {
   about: {
     title: "A little clarity changes the decision.",
-    eyebrow: "ABOUT REVIEW TOP COMPANIES",
+    eyebrow: "ABOUT RATE TOP COMPANIES",
     intro:
-      "Review Top Companies brings company information, practical guides, and comparison tools together for the decisions that deserve a closer look.",
+      "Rate Top Companies brings company information, practical guides, and comparison tools together for the decisions that deserve a closer look.",
     sections: [
       {
         title: "Built around the questions you ask",
@@ -19,7 +19,7 @@ export const policies: Record<
       },
       {
         title: "A publication with a practical purpose",
-        body: "Review Top Companies is a commercial comparison website. It is not a regulator, certification body, bank, law firm, or investment adviser. Reviews describe selected providers rather than every company in a market.",
+        body: "Rate Top Companies is a commercial comparison website. It is not a regulator, certification body, bank, law firm, or investment adviser. Reviews describe selected providers rather than every company in a market.",
       },
       {
         title: "Information should be useful before you share your details",
@@ -55,7 +55,7 @@ export const policies: Record<
     title: "About the publishing business.",
     eyebrow: "OWNERSHIP",
     intro:
-      "Review Top Companies is being developed as a commercial consumer comparison publication.",
+      "Rate Top Companies is being developed as a commercial consumer comparison publication.",
     sections: [
       {
         title: "The publishing entity",
@@ -96,7 +96,7 @@ export const policies: Record<
     ],
   },
   terms: {
-    title: "Using Review Top Companies.",
+    title: "Using Rate Top Companies.",
     eyebrow: "TERMS OF USE",
     intro:
       "The site provides general information and comparison tools to help you research companies and products.",
@@ -107,7 +107,7 @@ export const policies: Record<
       },
       {
         title: "External services",
-        body: "Products and services are offered by the relevant providers under their own terms. Review Top Companies does not execute investments, originate loans, issue cards, hold deposits, repair credit, or provide legal representation.",
+        body: "Products and services are offered by the relevant providers under their own terms. Rate Top Companies does not execute investments, originate loans, issue cards, hold deposits, repair credit, or provide legal representation.",
       },
       {
         title: "Calculator assumptions",

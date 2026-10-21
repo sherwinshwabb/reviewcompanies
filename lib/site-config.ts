@@ -6,7 +6,7 @@ const publishablePaths = new Set(["/", ...contentPaths]);
 
 export function resolveSiteSettings(env: Environment) {
   const configuredUrl = env.SITE_URL?.trim();
-  const url = new URL(configuredUrl || "https://reviewtopcompanies.com");
+  const url = new URL(configuredUrl || "https://ratetopcompanies.com");
   if (
     !["http:", "https:"].includes(url.protocol) ||
     url.username ||

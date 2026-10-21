@@ -29,7 +29,7 @@ export function Header() {
     <>
       <header className="header">
         <div className="container header-inner" ref={navRef}>
-          <Link href="/" aria-label="Review Top Companies home">
+          <Link href="/" aria-label="Rate Top Companies home">
             <Brand />
           </Link>
           <nav aria-label="Main navigation" className="desktop-nav">
@@ -158,7 +158,7 @@ export function Footer() {
           ))}
         </nav>
         <div className="footer-bottom">
-          <span>© 2026 Review Top Companies. All rights reserved.</span>
+          <span>© 2026 Rate Top Companies. All rights reserved.</span>
           <div>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>

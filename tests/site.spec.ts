@@ -106,8 +106,8 @@ test("preview indexing controls, branding assets, canonical metadata, and error 
   );
   for (const asset of [
     "/brand/logo.svg",
-    "/brand/logo.png",
-    "/brand/bookmark.png",
+    "/brand/ratetopcompanies-logo.png",
+    "/brand/ratetopcompanies-mark.png",
     "/brand/mark.svg",
     "/brand/logo-monochrome.svg",
     "/brand/logo-horizontal.svg",
@@ -116,7 +116,7 @@ test("preview indexing controls, branding assets, canonical metadata, and error 
     expect((await request.get(asset)).status(), asset).toBe(200);
   const gold = await (await request.get("/gold/best-gold-companies")).text();
   expect(gold).toContain(
-    'rel="canonical" href="https://reviewtopcompanies.com/gold/best-gold-companies"',
+    'rel="canonical" href="https://ratetopcompanies.com/gold/best-gold-companies"',
   );
   expect(gold).toContain("Sponsored #1 placement");
   expect(gold).toContain("application/ld+json");
@@ -259,7 +259,7 @@ test("every page has unique, complete metadata and valid structured data", async
         const decode = (s: string) =>
           s.replace(/&amp;/g, "&").replace(/&#x27;/g, "’").replace(/&quot;/g, '"');
         const title = decode(html.match(/<title>([^<]+)<\/title>/)?.[1] ?? "");
-        const pageTitle = title.replace(/ \| Review Top Companies$/, "");
+        const pageTitle = title.replace(/ \| Rate Top Companies$/, "");
         expect(pageTitle.length, `${path} title "${title}"`).toBeGreaterThan(
           10,
         );
@@ -281,7 +281,7 @@ test("every page has unique, complete metadata and valid structured data", async
         ).toBeUndefined();
         descriptions.set(description, path);
         expect(html, path).toContain(
-          `rel="canonical" href="https://reviewtopcompanies.com${path === "/" ? "" : path}"`,
+          `rel="canonical" href="https://ratetopcompanies.com${path === "/" ? "" : path}"`,
         );
         for (const tag of [
           'property="og:title"',

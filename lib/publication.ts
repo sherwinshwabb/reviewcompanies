@@ -4,7 +4,7 @@ export const publicationPages = {
     title: "About the publishing business.",
     eyebrow: "PUBLISHER INFORMATION",
     intro:
-      "Review Top Companies publishes company profiles, practical guides, and comparisons. Its commercial arrangements are explained in the advertising disclosure.",
+      "Rate Top Companies publishes company profiles, practical guides, and comparisons. Its commercial arrangements are explained in the advertising disclosure.",
     sections: [
       {
         title: "Publisher details",
@@ -24,7 +24,7 @@ export const publicationPages = {
     title: "The business behind the publication.",
     eyebrow: "ADVERTISING DISCLOSURE",
     intro:
-      "Review Top Companies is a commercial comparison publication. A clear view of our business belongs alongside a clear view of your options.",
+      "Rate Top Companies is a commercial comparison publication. A clear view of our business belongs alongside a clear view of your options.",
     sections: [
       {
         title: "A selected view of the market",

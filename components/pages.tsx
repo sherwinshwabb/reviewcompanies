@@ -479,7 +479,7 @@ export function ReviewPage({ provider: p }: { provider: Provider }) {
               <Icon name="external" size={13} />
             </a>
             <p>
-              Research reference: the Review Top Companies launch guide dated{" "}
+              Research reference: the Rate Top Companies launch guide dated{" "}
               {sourceDate}. Last reviewed {reviewedOnLabel}. Current
               account-specific terms should be confirmed with the provider.
             </p>

@@ -9,7 +9,7 @@
 import { categories, providers, type Category, type Provider } from "./catalog";
 import { type Guide } from "./guides";
 
-export const siteName = "Review Top Companies";
+export const siteName = "Rate Top Companies";
 export const publishedOn = "2026-10-01";
 export const reviewedOn = "2026-10-21";
 export const reviewedOnLabel = "October 21, 2026";
@@ -901,7 +901,7 @@ export type StaticSeo = {
 };
 
 export const homeSeo = {
-  metaTitle: "Review Top Companies: Compare the Best Companies of 2026",
+  metaTitle: "Rate Top Companies: Compare the Best Companies of 2026",
   metaDescription:
     "Compare the best gold IRA companies, mortgage lenders, banks, credit cards, debt relief and credit repair companies, investment firms, and law firms of 2026.",
   h1: "Compare the best companies before you choose.",
@@ -934,14 +934,14 @@ export const staticSeo: Record<string, StaticSeo> = {
   "/methodology": {
     metaTitle: "How We Review and Compare Companies | Methodology",
     metaDescription:
-      "The research framework behind Review Top Companies: category-specific criteria, weighted rubrics, evidence standards, paid placement disclosure, and corrections.",
+      "The research framework behind Rate Top Companies: category-specific criteria, weighted rubrics, evidence standards, paid placement disclosure, and corrections.",
     h1: "How we review and compare companies",
   },
   "/about": {
-    metaTitle: "About Review Top Companies",
+    metaTitle: "About Rate Top Companies",
     metaDescription:
-      "Review Top Companies publishes company comparisons and practical guides across gold, mortgages, banking, credit, investing, and legal services. Learn how we work.",
-    h1: "About Review Top Companies",
+      "Rate Top Companies publishes company comparisons and practical guides across gold, mortgages, banking, credit, investing, and legal services. Learn how we work.",
+    h1: "About Rate Top Companies",
   },
   "/editorial-policy": {
     metaTitle: "Editorial Policy & Standards",
@@ -952,38 +952,38 @@ export const staticSeo: Record<string, StaticSeo> = {
   "/ownership": {
     metaTitle: "Ownership & Publisher Information",
     metaDescription:
-      "Who publishes Review Top Companies, how paid placements are disclosed, and the publication’s role relative to the companies it profiles.",
+      "Who publishes Rate Top Companies, how paid placements are disclosed, and the publication’s role relative to the companies it profiles.",
     h1: "Ownership and publisher information",
   },
   "/privacy": {
     metaTitle: "Privacy Policy",
     metaDescription:
-      "How Review Top Companies handles browser storage, contact drafts, provider links, and analytics. No account is required to compare companies.",
+      "How Rate Top Companies handles browser storage, contact drafts, provider links, and analytics. No account is required to compare companies.",
     h1: "Privacy policy",
   },
   "/terms": {
     metaTitle: "Terms of Use",
     metaDescription:
-      "Terms for using Review Top Companies: general information rather than personalized advice, provider responsibility for offers, and calculator assumptions.",
+      "Terms for using Rate Top Companies: general information rather than personalized advice, provider responsibility for offers, and calculator assumptions.",
     h1: "Terms of use",
   },
   "/accessibility": {
     metaTitle: "Accessibility Statement",
     metaDescription:
-      "Review Top Companies is built for keyboard, screen reader, and mobile use, with readable comparison tables and a clear way to report a barrier.",
+      "Rate Top Companies is built for keyboard, screen reader, and mobile use, with readable comparison tables and a clear way to report a barrier.",
     h1: "Accessibility statement",
   },
   "/privacy-choices": {
     metaTitle: "Your Privacy Choices",
     metaDescription:
-      "Manage optional browser settings for Review Top Companies. Core comparison features remain available regardless of your choice.",
+      "Manage optional browser settings for Rate Top Companies. Core comparison features remain available regardless of your choice.",
     h1: "Your privacy choices",
   },
   "/contact": {
-    metaTitle: "Contact Review Top Companies",
+    metaTitle: "Contact Rate Top Companies",
     metaDescription:
-      "Contact Review Top Companies with a question about the publication, a company profile, or a comparison.",
-    h1: "Contact Review Top Companies",
+      "Contact Rate Top Companies with a question about the publication, a company profile, or a comparison.",
+    h1: "Contact Rate Top Companies",
   },
   "/corrections": {
     metaTitle: "Report a Correction",
@@ -994,13 +994,13 @@ export const staticSeo: Record<string, StaticSeo> = {
   "/advertise": {
     metaTitle: "Advertise With Us & Partnerships",
     metaDescription:
-      "Partner with Review Top Companies. Learn what we need from companies: accurate product records, a clear proposition, and measurable, disclosed outcomes.",
+      "Partner with Rate Top Companies. Learn what we need from companies: accurate product records, a clear proposition, and measurable, disclosed outcomes.",
     h1: "Advertise and partner with us",
   },
   "/advertising-disclosure": {
     metaTitle: "Advertising Disclosure",
     metaDescription:
-      "How Review Top Companies makes money, which placements are paid, and how commercial arrangements relate to list positions and company descriptions.",
+      "How Rate Top Companies makes money, which placements are paid, and how commercial arrangements relate to list positions and company descriptions.",
     h1: "Advertising disclosure",
   },
 };

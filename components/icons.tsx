@@ -138,10 +138,14 @@ export function Brand({
       className={`brand site-logo ${light ? "brand-light" : ""} ${compact ? "site-logo-compact" : ""}`}
     >
       <Image
-        src={compact ? "/brand/bookmark.png" : "/brand/logo.png"}
-        alt="Review Top Companies"
-        width={compact ? 175 : 2046}
-        height={227}
+        src={
+          compact
+            ? "/brand/ratetopcompanies-mark.png"
+            : "/brand/ratetopcompanies-logo.png"
+        }
+        alt="Rate Top Companies"
+        width={compact ? 174 : 2044}
+        height={compact ? 227 : 233}
         sizes={compact ? "44px" : "(max-width: 760px) 60vw, 320px"}
       />
     </span>

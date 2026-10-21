@@ -19,7 +19,7 @@ export async function GET(
   const { slug } = await params;
   const meta = resolvePageMeta("/" + slug.join("/")) ??
     resolvePageMeta("/")!;
-  const logo = await readFile(join(process.cwd(), "public/brand/logo.png"));
+  const logo = await readFile(join(process.cwd(), "public/brand/ratetopcompanies-logo.png"));
   const title = meta.title.replace(/ \| .*$/, "");
   const fontSize = title.length > 58 ? 50 : title.length > 42 ? 58 : 68;
   return new ImageResponse(
@@ -40,7 +40,7 @@ export async function GET(
         src={`data:image/png;base64,${logo.toString("base64")}`}
         alt={siteName}
         width={544}
-        height={60}
+        height={62}
       />
       <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
         <div
@@ -75,7 +75,7 @@ export async function GET(
         }}
       >
         <span>Updated {reviewedOnLabel}</span>
-        <span>reviewtopcompanies.com</span>
+        <span>ratetopcompanies.com</span>
       </div>
     </div>,
     {

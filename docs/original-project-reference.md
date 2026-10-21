@@ -1,6 +1,6 @@
-# Review Top Companies
+# Rate Top Companies
 
-A complete branded website preview for reviewtopcompanies.com, built with Next.js 16.3.8, React 19, TypeScript, and a reusable structured content catalog. Based on the supplied Review Top Companies Website Launch Guide dated October 1, 2026, with the user's explicit mockup overrides: exactly ten categories and Citadel Gold first in the gold comparison.
+A complete branded website preview for ratetopcompanies.com, built with Next.js 16.3.8, React 19, TypeScript, and a reusable structured content catalog. Based on the supplied Rate Top Companies Website Launch Guide dated October 1, 2026, with the user's explicit mockup overrides: exactly ten categories and Citadel Gold first in the gold comparison.
 
 ## Run and verify
 
@@ -17,7 +17,7 @@ npm test
 ## Included
 
 - Original navy and teal identity using Source Serif 4 and Inter, original SVG icons, comparison artwork, and editorial illustrations.
-- Logo assets in `public/brand`: stacked wordmark, horizontal wordmark, monochrome wordmark, and compact favicon mark.
+- Logo assets in `public/brand`: wordmark PNG (`ratetopcompanies-logo.png`), SVG wrappers, monochrome wordmark, and compact bookmark mark (`ratetopcompanies-mark.png`).
 - Responsive homepage, exact ten-category directory, searchable company directory, and guide library.
 - Ten detailed comparison pages with service filters, alphabetical sorting, provider cards, advantages, limitations, buying guidance, category methods, FAQs, and source links.
 - Company/product profiles populated from the guide's research pool. Financial offers are not fabricated; unknown pricing is directed to the official provider.
