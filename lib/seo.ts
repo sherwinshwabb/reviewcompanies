@@ -105,7 +105,7 @@ export const categorySeo: Record<string, CategorySeo> = {
       {
         question: "Which gold IRA company is best?",
         answer:
-          "It depends on whether you want an IRA or direct delivery, how much you are investing, and which fees matter most to you. We do not publish numerical scores, and Citadel Gold’s first position is a paid placement. Use the comparison table and ask each company the same questions.",
+          "It depends on whether you want an IRA or direct delivery, how much you are investing, and which fees matter most to you. We do not publish numerical scores. Use the comparison table and ask each company the same questions.",
       },
       {
         question: "Is gold a safe investment?",
@@ -934,7 +934,7 @@ export const staticSeo: Record<string, StaticSeo> = {
   "/methodology": {
     metaTitle: "How We Review and Compare Companies | Methodology",
     metaDescription:
-      "The research framework behind Rate Top Companies: category-specific criteria, weighted rubrics, evidence standards, paid placement disclosure, and corrections.",
+      "The research framework behind Rate Top Companies: category-specific criteria, weighted rubrics, evidence standards, and corrections.",
     h1: "How we review and compare companies",
   },
   "/about": {
@@ -952,7 +952,7 @@ export const staticSeo: Record<string, StaticSeo> = {
   "/ownership": {
     metaTitle: "Ownership & Publisher Information",
     metaDescription:
-      "Who publishes Rate Top Companies, how paid placements are disclosed, and the publication’s role relative to the companies it profiles.",
+      "Who publishes Rate Top Companies and the publication’s role relative to the companies it profiles.",
     h1: "Ownership and publisher information",
   },
   "/privacy": {

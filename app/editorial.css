@@ -791,13 +791,13 @@ h2 em {
 }
 .top-pick-label {
   display: inline-block;
-  color: var(--brick);
-  background: #f5e6e1;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 4px 9px;
-  border-radius: 4px;
+  color: #a8a39d;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0;
   margin-bottom: 11px;
+  text-decoration: none;
 }
 .provider-verdict {
   font-weight: 400;
@@ -1799,39 +1799,6 @@ h2 em {
   }
 }
 
-.paid-placement-disclosure {
-  color: var(--ink);
-  font-size: 13px;
-  line-height: 1.65;
-  margin-top: 16px;
-}
-.paid-placement-disclosure a {
-  color: var(--brick);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  white-space: nowrap;
-}
-.gold-editorial-copy > .paid-placement-disclosure {
-  font-size: 13px;
-  line-height: 1.65;
-  margin-bottom: 0;
-}
-.top-pick-label {
-  font-size: 12px;
-}
-.quick-pick:first-child .eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.06em;
-}
-.review-action-card > .paid-placement-disclosure {
-  color: var(--ink);
-  font-size: 13px;
-}
-@media (max-width: 760px) {
-  .paid-placement-disclosure {
-    font-size: 13px;
-  }
-}
 
 /* SEO overhaul: comparison stats strip, overview sections, related reviews */
 .page-stats {

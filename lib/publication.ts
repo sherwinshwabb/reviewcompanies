@@ -11,10 +11,6 @@ export const publicationPages = {
         body: "The publishing entity and public business contact details have not yet been supplied for this website preview. These details will be completed before public launch.",
       },
       {
-        title: "Paid placements",
-        body: "Citadel Gold’s #1 position is a paid placement. The publisher receives payment for this position in the gold-company comparison.",
-      },
-      {
         title: "Our role",
         body: "The publication organizes information and comparisons. Providers are responsible for their own products, services, offers, agreements, and customer relationships.",
       },
@@ -31,11 +27,11 @@ export const publicationPages = {
         body: "Our comparisons cover selected companies and products, rather than every available provider. List positions, company descriptions, and customer ratings are different things. We do not present list positions as consumer review scores.",
       },
       {
-        title: "Company links and commercial arrangements",
-        body: "Citadel Gold’s #1 position is a paid placement. We receive payment for that position in our gold-company comparison. This commercial arrangement determines Citadel Gold’s first position and its prominence on this site.",
+        title: "Paid placement",
+        body: "Citadel Gold’s first position in our gold comparison is a paid placement.",
       },
       {
-        title: "Company information and paid placement",
+        title: "Company information",
         body: "Company profiles describe service types, published offerings, and considerations. The research framework is explained in the methodology. Review current written terms directly with each provider before making your decision.",
       },
     ],

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { PaidPlacementDisclosure } from "./editorial";
 import Image from "next/image";
 import { Icon } from "./icons";
 import { CategoryGrid, SectionHeading, GuideCard, MethodSteps } from "./ui";
@@ -97,7 +96,6 @@ export function Home() {
               Citadel Gold <Icon name="arrow" size={14} />
             </Link>
           </div>
-          <PaidPlacementDisclosure />
         </div>
       </section>
       <section className="home-guides container">

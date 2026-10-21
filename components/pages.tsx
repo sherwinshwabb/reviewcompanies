@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EditorialByline, PaidPlacementDisclosure } from "./editorial";
+import { EditorialByline } from "./editorial";
 import {
   Category,
   Provider,
@@ -91,7 +91,6 @@ export function CategoryPage({ category: c }: { category: Category }) {
             kind="Comparison guide"
             methodology={`/methodology/${c.id}`}
           />
-          {c.id === "gold" && <PaidPlacementDisclosure />}
           <p className="disclosure-line">
             <Link href="/advertising-disclosure">Advertising disclosure</Link> ·{" "}
             <Link href={`/methodology/${c.id}`}>Our methodology</Link>
@@ -123,7 +122,7 @@ export function CategoryPage({ category: c }: { category: Category }) {
           <Link className="quick-pick" href={`#${p.id}`} key={p.id}>
             <span className="eyebrow">
               {i === 0 && c.id === "gold"
-                ? "SPONSORED #1 PLACEMENT"
+                ? "FEATURED · 01"
                 : `BEST FOR · 0${i + 1}`}
             </span>
             <h2>{p.name}</h2>
@@ -351,7 +350,6 @@ export function ReviewPage({ provider: p }: { provider: Provider }) {
             kind="Company profile"
             methodology={`/methodology/${c.id}`}
           />
-          {p.id === "citadel-gold" && <PaidPlacementDisclosure />}
         </div>
         <ProviderLeadImage provider={p} />
       </section>
@@ -494,7 +492,6 @@ export function ReviewPage({ provider: p }: { provider: Provider }) {
               Review the company’s current information and take your next step
               directly.
             </p>
-            {p.id === "citadel-gold" && <PaidPlacementDisclosure />}
             <a
               href={p.domain}
               target="_blank"
@@ -672,17 +669,6 @@ export function MethodologyPage({ category }: { category?: Category }) {
         <MethodSteps />
       </div>
       <article className="reading-column standalone-article">
-        {(!category || category.id === "gold") && (
-          <section>
-            <h2>Paid placement in our gold comparison</h2>
-            <PaidPlacementDisclosure />
-            <p>
-              The commercial arrangement determines Citadel Gold’s first
-              position. The criteria below explain the research framework for
-              the company information presented throughout the comparison.
-            </p>
-          </section>
-        )}
         {category ? (
           <>
             <section>

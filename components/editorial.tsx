@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { goldPaidPlacement } from "@/lib/commercial";
 import { sourceDate } from "@/lib/catalog";
 import { reviewedOn, reviewedOnLabel } from "@/lib/seo";
 import { Icon } from "./icons";
@@ -58,14 +57,5 @@ export function EditorialTeam() {
         <Link href="/corrections">Suggest a correction</Link>
       </div>
     </section>
-  );
-}
-
-export function PaidPlacementDisclosure() {
-  return (
-    <p className="paid-placement-disclosure">
-      {goldPaidPlacement.disclosure}{" "}
-      <Link href="/advertising-disclosure">Details</Link>
-    </p>
   );
 }

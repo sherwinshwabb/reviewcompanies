@@ -118,7 +118,7 @@ test("preview indexing controls, branding assets, canonical metadata, and error 
   expect(gold).toContain(
     'rel="canonical" href="https://ratetopcompanies.com/gold/best-gold-companies"',
   );
-  expect(gold).toContain("Sponsored #1 placement");
+  expect(gold).toContain(">Sponsored<");
   expect(gold).toContain("application/ld+json");
   const missing = await request.get("/this-page-does-not-exist");
   expect(missing.status()).toBe(404);
@@ -227,21 +227,20 @@ test("publishing settings keep previews private and require reviewed pages", asy
     expect(() => resolveSiteSettings(invalid)).toThrow();
 });
 
-test("the confirmed paid first placement is disclosed near the relevant content", async ({
+test("the paid first placement is labeled only where it appears", async ({
   request,
 }) => {
-  for (const path of [
-    "/",
-    "/gold/best-gold-companies",
-    "/reviews/citadel-gold",
-    "/methodology/gold",
-    "/advertising-disclosure",
-  ]) {
+  const gold = await (await request.get("/gold/best-gold-companies")).text();
+  expect(gold).toContain(">Sponsored<");
+  expect(gold).not.toContain("Our top pick");
+  const disclosure = await (
+    await request.get("/advertising-disclosure")
+  ).text();
+  expect(disclosure).toContain("is a paid placement");
+  for (const path of ["/", "/reviews/citadel-gold", "/methodology/gold"]) {
     const html = await (await request.get(path)).text();
-    expect(html, path).toContain(
-      "Citadel Gold’s #1 position is a paid placement.",
-    );
-    expect(html, path).not.toContain("Our top pick");
+    expect(html, path).not.toContain("paid placement");
+    expect(html, path).not.toContain("Sponsored");
   }
 });
 
