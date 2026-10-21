@@ -1,0 +1,26 @@
+{
+  "tool": "Built-in image_gen",
+  "generated": "2026-10-21",
+  "assets": [
+    {
+      "file": "public/images/hero.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide editorial website hero, landscape 3:2 photograph intended for a shallow panoramic crop. Hyperrealistic premium stock photography, warm natural morning sunlight in an understated lived-in kitchen. On the RIGHT HALF of the frame, candid woman in her late 30s wearing oatmeal knit sweater sitting at wooden dining table reviewing household papers, ceramic mug, notebook and edge of laptop, olive foliage near window. LEFT HALF is quiet softly shaded out-of-focus kitchen and greenery with generous negative space for overlaid white headline. Window sunlight with realistic highlights and long shadows, ivory beige wood muted olive palette, tactile textures, subtle natural grain, full-frame DSLR 35mm editorial lens. Relaxed real everyday moment, sophisticated lifestyle publication art direction. No text, no logos, no watermarks, no graphic overlay. Save generated asset locally and return path."
+    },
+    {
+      "file": "public/images/gold.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial precious metals guide photograph, landscape 3:2. Hyperrealistic premium still life stock photograph of a small considered arrangement of five physical gold bullion coins, two leaning on a short stack on sun-warmed pale limestone table, beautifully detailed embossed classical Liberty-like figure, realistic fine metallic relief and ridged edges. Soft olive foliage out of focus in upper left, warm tan plaster background, elegant Mediterranean afternoon sunlight casting soft leaf shadows. Warm restrained gold tones, tactile pale stone, shallow depth of field, professional macro 85mm photography. Trustworthy sophisticated editorial money guide rather than flashy luxury ad, tight composition. No bars, no giant piles, no text overlay, no watermark, no logos. Return local saved path."
+    },
+    {
+      "file": "public/images/credit-cards.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 editorial guide thumbnail. Premium hyperrealistic stock lifestyle photo, candid woman with dark hair in a cream knit sweater holding a ceramic coffee mug in both hands, thoughtfully looking toward kitchen window at right. Cozy sunlit contemporary lived-in kitchen, green plants, cream cabinets, corner of laptop on wood table. Beautiful natural morning light, warm ivory muted olive warm wood palette, subtle film grain, realistic skin texture, professional 50mm documentary photograph. Wide medium shot. No text or logos or watermark. Return local saved path."
+    },
+    {
+      "file": "public/images/mortgages.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 editorial mortgage guide photograph. Hyperrealistic premium architectural stock photo of a welcoming modest beautiful craftsman home on a quiet leafy American neighborhood street, sage ivory siding, front porch, carefully tended garden and mature trees, morning sun spilling through the leaves from upper right with realistic soft flare. Human scale and attainable real home, calm lifestyle publication art direction, warm neutral color grade coordinated with cream and muted olive, professional 35mm photography with authentic architectural detail. No people, no text, no watermark, no real estate signage. Return local saved path."
+    },
+    {
+      "file": "public/images/debt-relief.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 editorial financial planning guide thumbnail. Hyperrealistic premium stock still life photo, an open notebook with subtle nonlegible handwritten household budget notes, black pen and reading glasses on a warm oak kitchen table, sage green ceramic mug behind at right and small green plant left. Warm afternoon sunlight coming through window casting gentle leaf shadows. Candid ordinary domestic setting, calm organized practical mood, tactile paper and wood grain, shallow depth of field, high end 50mm editorial photograph. Palette warm ivory, honey oak, muted olive. No readable text, no logos, no watermark. Return local saved path."
+    }
+  ]
+}

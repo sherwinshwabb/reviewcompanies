@@ -1,0 +1,126 @@
+{
+  "source": "../reviewtopcompanies",
+  "migrated": "2026-10-21",
+  "files": [
+    {
+      "path": "lib/catalog.ts",
+      "sha256": "77963823fd8bb4773d01165132e9a7b2735f2152fb4b8c6e8330e8ed05af192f",
+      "identicalToSource": true
+    },
+    {
+      "path": "lib/company-brands.json",
+      "sha256": "6259f58e7467c1e4c3d269c675301cdd65890cdb111dce8bbc6208268fbf1a36",
+      "identicalToSource": true
+    },
+    {
+      "path": "lib/guides.ts",
+      "sha256": "3332621173f4790896b646cb364ee08da3b892c739e8ea1d31092fe07994d06b",
+      "identicalToSource": true
+    },
+    {
+      "path": "lib/policies.ts",
+      "sha256": "cc453a9fbee6c35814a7ccdfb587fc0a70a9f448cb172492a6f5d998355bfb06",
+      "identicalToSource": true
+    },
+    {
+      "path": "lib/routes.ts",
+      "sha256": "7600ab4a81908e2666b83054610c09cf173415bd80f374fd1f528a2e7941e7a1",
+      "identicalToSource": true
+    },
+    {
+      "path": "lib/loan.ts",
+      "sha256": "e0ae2c00f2eee974dc7ea745a7a2706dc925e380e1782dcd1a8f08393df1c0f2",
+      "identicalToSource": true
+    },
+    {
+      "path": "lib/browser-store.ts",
+      "sha256": "0e2c55c2a970cf471916d02c154b610989ee9a6d58584c9f52bf28fc864a3ad5",
+      "identicalToSource": true
+    }
+  ],
+  "companyLogosPreserved": 41,
+  "inventory": {
+    "categories": 10,
+    "companyProfiles": 45,
+    "guides": 14
+  },
+  "rankings": {
+    "gold": [
+      "citadel-gold",
+      "augusta-precious-metals",
+      "goldco",
+      "birch-gold-group",
+      "american-hartford-gold",
+      "apmex",
+      "jm-bullion"
+    ],
+    "mortgages": [
+      "rocket-mortgage",
+      "rate",
+      "better-mortgage",
+      "veterans-united",
+      "pnc-mortgage"
+    ],
+    "personal-injury": [
+      "morgan-and-morgan",
+      "panish-shea-ravipudi",
+      "kline-and-specter"
+    ],
+    "student-loans": [
+      "sofi-refinance",
+      "earnest",
+      "citizens-refinance",
+      "elfi"
+    ],
+    "credit-cards": [
+      "chase-freedom-unlimited",
+      "chase-sapphire-preferred",
+      "citi-double-cash",
+      "capital-one-venture",
+      "amex-blue-cash-everyday"
+    ],
+    "banking": [
+      "ally-bank",
+      "capital-one-bank",
+      "chase-bank",
+      "sofi-bank",
+      "marcus"
+    ],
+    "lemon-law": [
+      "knight-law-group",
+      "strategic-legal-practices",
+      "kimmel-and-silverman"
+    ],
+    "debt-relief": [
+      "national-debt-relief",
+      "freedom-debt-relief",
+      "accredited-debt-relief",
+      "greenpath",
+      "money-management-international"
+    ],
+    "credit-repair": [
+      "sky-blue-credit",
+      "the-credit-people",
+      "credit-saint"
+    ],
+    "investing": [
+      "fidelity",
+      "charles-schwab",
+      "vanguard",
+      "betterment",
+      "wealthfront"
+    ]
+  },
+  "additionalSourceReferences": [
+    {
+      "path": "docs/company-brand-sources.json",
+      "source": "../reviewtopcompanies/docs/company-brand-sources.json",
+      "sha256": "67978e0869f7445f15c12fcfc05a013eafe5c4ea580aff01fe6a794bf1aa891a"
+    },
+    {
+      "path": "docs/original-project-reference.md",
+      "source": "../reviewtopcompanies/README.md",
+      "sha256": "610e9e31d8257ae782f82da793ac9f1a4efed5f09e67fd2836295b3ed656a4be"
+    }
+  ]
+}
