@@ -70,14 +70,25 @@ export function CategoryComparison({
           const rank = providers.findIndex((item) => item.id === p.id) + 1;
           return (
             <article
-              className={`provider-card ${p.id === "citadel-gold" ? "top-pick-card" : ""}`}
+              className={`provider-card ${p.id === "citadel-gold" ? "top-pick-card" : ""} ${rank <= 3 ? `rank-${rank}` : ""}`}
               key={p.id}
               id={p.id}
             >
               <div className="provider-card-main">
                 <div className="provider-identity">
                   <span className="provider-rank">
-                    {String(rank).padStart(2, "0")} / {category.short}
+                    {rank <= 3 ? (
+                      <>
+                        <b className={`rank-medal rank-medal-${rank}`}>
+                          {rank}
+                        </b>
+                        <span className="rank-ordinal">Ranked #{rank}</span>
+                      </>
+                    ) : (
+                      <>
+                        {String(rank).padStart(2, "0")} / {category.short}
+                      </>
+                    )}
                   </span>
                   <ProviderLogo provider={p} large />
                   <h2>

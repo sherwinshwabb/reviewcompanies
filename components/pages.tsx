@@ -119,7 +119,14 @@ export function CategoryPage({ category: c }: { category: Category }) {
       </section>
       <section className="container quick-picks" aria-label="Quick picks">
         {list.slice(0, 3).map((p, i) => (
-          <Link className="quick-pick" href={`#${p.id}`} key={p.id}>
+          <Link
+            className={`quick-pick rank-${i + 1}`}
+            href={`#${p.id}`}
+            key={p.id}
+          >
+            <b className={`rank-medal rank-medal-${i + 1}`} aria-hidden="true">
+              {i + 1}
+            </b>
             <span className="eyebrow">
               {i === 0 && c.id === "gold"
                 ? "FEATURED · 01"
