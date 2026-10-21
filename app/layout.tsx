@@ -33,7 +33,31 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
-  icons: { icon: "/brand/mark.svg", apple: "/brand/mark.svg" },
+  icons: {
+    icon: [
+      {
+        url: "/brand/favicon-16.png?v=bookmark",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/brand/favicon-32.png?v=bookmark",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/brand/mark.svg?v=bookmark",
+        sizes: "any",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/favicon.ico?v=bookmark",
+    apple: {
+      url: "/brand/apple-touch-icon.png?v=bookmark",
+      sizes: "180x180",
+      type: "image/png",
+    },
+  },
 };
 export default function RootLayout({
   children,

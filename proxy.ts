@@ -10,6 +10,7 @@ const knownPaths = new Set([
   "/robots.txt",
   "/sitemap.xml",
   "/icon.svg",
+  "/favicon.ico",
   "/opengraph-image",
   ...contentPaths,
   ...Object.keys(aliases),
@@ -21,6 +22,9 @@ const knownPaths = new Set([
     "logo-monochrome.svg",
     "logo.png",
     "bookmark.png",
+    "favicon-16.png",
+    "favicon-32.png",
+    "apple-touch-icon.png",
   ].map((file) => `/brand/${file}`),
   ...["hero", "gold", "credit-cards", "mortgages", "debt-relief"].map(
     (file) => `/images/${file}.webp`,
