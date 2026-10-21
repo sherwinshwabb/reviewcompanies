@@ -55,7 +55,7 @@ export const policies: Record<
     title: "About the publishing business.",
     eyebrow: "OWNERSHIP",
     intro:
-      "Review Top Companies is being developed as a commercial consumer comparison publication for Shaun and Devin Fox.",
+      "Review Top Companies is being developed as a commercial consumer comparison publication.",
     sections: [
       {
         title: "The publishing entity",

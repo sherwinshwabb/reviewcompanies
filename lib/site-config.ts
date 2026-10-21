@@ -21,9 +21,14 @@ export function resolveSiteSettings(env: Environment) {
   }
   const requestedIndexing =
     env.SITE_INDEXING_ENABLED === "true" && env.VERCEL_ENV !== "preview";
-  const approvedPaths = [
-    ...new Set((env.SITE_APPROVED_PATHS || "").split(/[\s,]+/).filter(Boolean)),
-  ];
+  const requestedPaths = (env.SITE_APPROVED_PATHS || "")
+    .split(/[\s,]+/)
+    .filter(Boolean);
+  // "all" approves every content path at once for a reviewed public launch.
+  const approvedPaths =
+    requestedPaths.length === 1 && requestedPaths[0] === "all"
+      ? [...publishablePaths]
+      : [...new Set(requestedPaths)];
   for (const path of approvedPaths) {
     if (!publishablePaths.has(path))
       throw new Error(

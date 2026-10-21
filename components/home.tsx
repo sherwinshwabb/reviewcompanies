@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Icon } from "./icons";
 import { CategoryGrid, SectionHeading, GuideCard, MethodSteps } from "./ui";
 import { guides } from "@/lib/guides";
+import { homeSeo } from "@/lib/seo";
 
 export function Home() {
   const latest = [
@@ -17,18 +18,18 @@ export function Home() {
         <Image
           className="hero-photograph"
           src="/images/hero.webp"
-          alt="A quiet moment reviewing household plans at a sunlit kitchen table"
+          alt="A person reviewing household finances at a sunlit kitchen table"
           fill
           sizes="100vw"
           preload
         />
         <div className="hero-shade" />
         <div className="container photo-hero-content">
-          <h1 id="hero-heading">
-            Big decisions.
-            <br />A clearer starting point.
-          </h1>
-          <p>Our recommendations. Your next move.</p>
+          <h1 id="hero-heading">{homeSeo.h1}</h1>
+          <p>
+            {homeSeo.tagline} Compare gold IRA companies, mortgage lenders,
+            banks, credit cards, debt relief, investing, and law firms.
+          </p>
           <form className="editorial-search" action="/search" role="search">
             <Icon name="search" size={22} />
             <label htmlFor="home-search" className="sr-only">
@@ -48,19 +49,21 @@ export function Home() {
       </section>
       <div className="popular-bar">
         <div className="container popular-bar-inner">
-          <span>Popular searches</span>
-          <Link href="/gold/best-gold-companies">Gold companies</Link>
-          <Link href="/mortgages/best-mortgage-lenders">Mortgage lenders</Link>
-          <Link href="/legal/personal-injury">Personal injury lawyers</Link>
-          <Link href="/credit-cards/best-credit-cards">Credit cards</Link>
+          <span>Popular comparisons</span>
+          <Link href="/gold/best-gold-companies">Best gold IRA companies</Link>
+          <Link href="/mortgages/best-mortgage-lenders">
+            Best mortgage lenders
+          </Link>
+          <Link href="/legal/personal-injury">Personal injury law firms</Link>
+          <Link href="/credit-cards/best-credit-cards">Best credit cards</Link>
           <Link href="/debt-relief/best-debt-relief-companies">
-            Debt relief
+            Debt relief companies
           </Link>
         </div>
       </div>
       <section className="home-categories container" id="categories">
         <SectionHeading
-          title="Find your starting point"
+          title="Compare companies by category"
           href="/categories"
           linkText="Explore all categories"
         />
@@ -76,17 +79,17 @@ export function Home() {
           />
         </div>
         <div className="gold-editorial-copy">
-          <span className="eyebrow">THE GOLD GUIDE</span>
+          <span className="eyebrow">THE GOLD IRA GUIDE</span>
           <h2 id="gold-heading">
             A more confident way
-            <br className="desktop-break" /> to compare gold companies.
+            <br className="desktop-break" /> to compare gold IRA companies.
           </h2>
           <p>
-            Explore the companies, understand the differences, and find a
-            company that fits your goals.
+            Compare gold IRA companies and bullion dealers on fees, minimums,
+            storage, and buyback terms, and find a company that fits your goals.
           </p>
           <Link className="button" href="/gold/best-gold-companies">
-            Compare gold companies <Icon name="arrow" size={19} />
+            Compare gold IRA companies <Icon name="arrow" size={19} />
           </Link>
           <div className="featured-pick">
             Featured company:{" "}
@@ -99,7 +102,7 @@ export function Home() {
       </section>
       <section className="home-guides container">
         <SectionHeading
-          title="Good questions. Clear answers."
+          title="Guides and insights"
           href="/guides"
           linkText="More articles"
         />
@@ -115,8 +118,9 @@ export function Home() {
             <div>
               <span className="eyebrow">HOW WE CHOOSE</span>
               <h2>
-                A little more care.
-                <br />A lot more clarity.
+                How we review
+                <br />
+                and compare companies.
               </h2>
             </div>
             <p>
@@ -125,7 +129,7 @@ export function Home() {
               you.
             </p>
             <Link className="inline-link" href="/methodology">
-              Our approach <Icon name="arrow" size={18} />
+              Our methodology <Icon name="arrow" size={18} />
             </Link>
           </div>
           <MethodSteps />

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { goldPaidPlacement } from "@/lib/commercial";
 import { sourceDate } from "@/lib/catalog";
+import { reviewedOn, reviewedOnLabel } from "@/lib/seo";
 import { Icon } from "./icons";
 
 export function EditorialByline({
@@ -23,8 +24,9 @@ export function EditorialByline({
         </Link>
         <span>
           {kind}
-          {minutes ? ` · ${minutes} min read` : ""} · Research reference:{" "}
-          <time dateTime="2026-10-01">{sourceDate}</time>
+          {minutes ? ` · ${minutes} min read` : ""} · Updated{" "}
+          <time dateTime={reviewedOn}>{reviewedOnLabel}</time> · Research
+          reference: <time dateTime="2026-10-01">{sourceDate}</time>
         </span>
       </div>
       <Link href={methodology || "/editorial-policy"} className="method-link">

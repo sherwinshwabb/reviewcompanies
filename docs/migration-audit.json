@@ -19,8 +19,9 @@
     },
     {
       "path": "lib/policies.ts",
-      "sha256": "cc453a9fbee6c35814a7ccdfb587fc0a70a9f448cb172492a6f5d998355bfb06",
-      "identicalToSource": true
+      "sha256": "a9aa97501afc68521ca8b6cf227483dd2166aeb5396c93fb8567f0c7f326643c",
+      "identicalToSource": false,
+      "note": "Publisher-identity placeholder text revised on 2026-10-21; company and ranking data unchanged."
     },
     {
       "path": "lib/routes.ts",

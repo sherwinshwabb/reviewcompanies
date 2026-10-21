@@ -1832,3 +1832,84 @@ h2 em {
     font-size: 13px;
   }
 }
+
+/* SEO overhaul: comparison stats strip, overview sections, related reviews */
+.page-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #e6e0d9;
+}
+.page-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.page-stats dt {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #716d68;
+}
+.page-stats dd {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--navy);
+}
+.overview-item {
+  margin-top: 30px;
+}
+.overview-item h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.overview-item p {
+  font-size: 17px;
+  line-height: 1.85;
+}
+.article-companies {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #e6e0d9;
+}
+.article-companies h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+.article-companies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.article-companies li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  align-items: baseline;
+}
+.article-companies li a {
+  color: var(--teal);
+  font-weight: 600;
+}
+.article-companies li span {
+  color: #716d68;
+  font-size: 14px;
+}
+.related-section-guides {
+  padding-top: 0;
+}
+@media (max-width: 760px) {
+  .page-stats {
+    gap: 14px 24px;
+  }
+  .page-stats dd {
+    font-size: 18px;
+  }
+}

@@ -4,15 +4,12 @@ import { pageRobots, siteSettings } from "@/lib/site-config";
 import { notFound } from "next/navigation";
 import { contentPaths } from "@/lib/site-paths";
 import Link from "next/link";
-import {
-  categories,
-  providers,
-  providerById,
-  categoryById,
-} from "@/lib/catalog";
-import { guides, guideBySlug } from "@/lib/guides";
+import { categories, providerById, categoryById } from "@/lib/catalog";
+import { guideBySlug } from "@/lib/guides";
 import { policies as sourcePolicies } from "@/lib/policies";
 import { publicationPages } from "@/lib/publication";
+import { resolvePageMeta } from "@/lib/page-meta";
+import { staticSeo } from "@/lib/seo";
 const policies = {
   ...sourcePolicies,
   ...publicationPages,
@@ -30,38 +27,6 @@ import { PrivacyPreferences, MessageDraft } from "@/components/preferences";
 export function generateStaticParams() {
   return contentPaths.map((path) => ({ slug: path.slice(1).split("/") }));
 }
-function pageInfo(path: string) {
-  const c = categories.find((c) => c.path === path);
-  if (c) return { title: c.title, description: c.intro };
-  const parts = path.split("/");
-  if (parts[1] === "reviews") {
-    const p = providerById(parts[2]);
-    if (p) return { title: `${p.name} Review`, description: p.summary };
-  }
-  if (parts[1] === "guides" && parts[2]) {
-    const g = guideBySlug(parts[2]);
-    if (g) return { title: g.title, description: g.description };
-  }
-  if (parts[1] === "methodology") {
-    const cat = categories.find((c) => c.id === parts[2]);
-    return {
-      title: cat ? `${cat.short} Methodology` : "How We Review",
-      description: "The research framework behind Review Top Companies.",
-    };
-  }
-  const policy = policies[parts[1]];
-  if (policy) return { title: policy.title, description: policy.intro };
-  return {
-    title:
-      path === "/categories"
-        ? "All Categories"
-        : path === "/companies"
-          ? "Company Reviews"
-          : "Guides & Insights",
-    description:
-      "Explore practical company comparisons and guides from Review Top Companies.",
-  };
-}
 export async function generateMetadata({
   params,
 }: {
@@ -69,10 +34,27 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const path = "/" + slug.join("/");
+  const meta = resolvePageMeta(path);
+  if (!meta) return { title: "Page not found", robots: { index: false } };
+  const isArticle = meta.kind === "review" || meta.kind === "guide";
   return {
-    ...pageInfo(path),
+    title: meta.title,
+    description: meta.description,
     alternates: { canonical: path },
     robots: pageRobots(path),
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: path,
+      type: isArticle ? "article" : "website",
+      images: [{ url: `/og${path}`, width: 1200, height: 630, alt: meta.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: [`/og${path}`],
+    },
   };
 }
 export default async function ContentPage({
@@ -104,6 +86,7 @@ export default async function ContentPage({
   }
   if (path === "/companies" || path === "/guides") {
     const isCompanies = path === "/companies";
+    const seo = staticSeo[path];
     return (
       <main id="main-content">
         <Breadcrumb
@@ -117,26 +100,8 @@ export default async function ContentPage({
               ? "GET TO KNOW YOUR OPTIONS"
               : "A LITTLE MORE PERSPECTIVE"}
           </span>
-          <h1>
-            {isCompanies ? (
-              <>
-                The companies.
-                <br />
-                <em>The complete picture.</em>
-              </>
-            ) : (
-              <>
-                Good questions.
-                <br />
-                <em>Clearer answers.</em>
-              </>
-            )}
-          </h1>
-          <p>
-            {isCompanies
-              ? "Explore company and product profiles across our ten categories. Build a shortlist around what matters to you."
-              : "Practical guides to the details behind your biggest financial and legal decisions."}
-          </p>
+          <h1>{seo.h1}</h1>
+          <p>{seo.intro}</p>
         </section>
         <section className="container section section-top-small">
           {isCompanies ? <CompanyDirectory /> : <GuideDirectory />}
@@ -146,12 +111,13 @@ export default async function ContentPage({
   }
   if (slug.length === 1 && policies[slug[0]]) {
     const p = policies[slug[0]];
+    const seo = staticSeo[path];
     return (
       <main id="main-content">
         <Breadcrumb items={[{ label: p.eyebrow.toLowerCase() }]} />
         <section className="page-intro container">
           <span className="eyebrow">{p.eyebrow}</span>
-          <h1>{p.title}</h1>
+          <h1>{seo?.h1 || p.title}</h1>
           <p>{p.intro}</p>
         </section>
         <article className="reading-column standalone-article policy-article">

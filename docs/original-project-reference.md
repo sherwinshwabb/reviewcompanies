@@ -99,7 +99,7 @@ Before changing indexing, complete factual research, operating details, publishi
 
 ### First 30 days: prove one useful comparison
 
-Shaun owns the business model, funding, and company relationships. Devin owns the product, implementation, and launch coordination. Assign an editor/researcher to collect standardized gold quotes and a qualified reviewer to check the research. Complete five gold company profiles and the five supporting gold guides with evidence. Connect a CMS only once the required fields and approval states are agreed.
+The publisher owns the business model, funding, company relationships, product, implementation, and launch coordination. Assign an editor/researcher to collect standardized gold quotes and a qualified reviewer to check the research. Complete five gold company profiles and the five supporting gold guides with evidence. Connect a CMS only once the required fields and approval states are agreed.
 
 Focus the first acquisition work on questions the publication can answer with original evidence: total account costs, same-product dealer quotes, buyback spreads, custody responsibilities, and promotion conditions. The goal is to create a page readers can actually use, with a maintenance cost the business can sustain.
 

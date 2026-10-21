@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { categories, providers, categoryById } from "@/lib/catalog";
+import { categoryLabel } from "@/lib/seo";
 import { guides } from "@/lib/guides";
 import { Icon } from "./icons";
 import { ProviderLogo, ProviderLeadImage, GuideCard } from "./ui";
@@ -37,7 +38,7 @@ export function CompanyDirectory() {
             <option value="all">All 10 categories</option>
             {categories.map((c) => (
               <option value={c.id} key={c.id}>
-                {c.title}
+                {categoryLabel(c)}
               </option>
             ))}
           </select>
@@ -200,7 +201,7 @@ export function SearchResults({
                     <Icon name={c.icon} />
                   </span>
                   <div>
-                    <h3>{c.title}</h3>
+                    <h3>{categoryLabel(c)}</h3>
                     <p>{c.description}</p>
                   </div>
                   <Icon name="arrow" size={19} />

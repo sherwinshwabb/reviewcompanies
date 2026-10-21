@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
-import { siteSettings, siteUrl, pageRobots } from "@/lib/site-config";
+import type { Metadata, Viewport } from "next";
+import { siteSettings, pageRobots } from "@/lib/site-config";
+import { homeSeo, siteName } from "@/lib/seo";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import { Header, Footer } from "@/components/navigation";
 import { ComparisonProvider } from "@/components/comparison-context";
@@ -18,20 +20,29 @@ const serif = Source_Serif_4({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#faf8f5",
+};
 export const metadata: Metadata = {
   metadataBase: new URL(siteSettings.origin),
+  applicationName: siteName,
   title: {
-    default: "Review Top Companies | A clearer starting point",
-    template: "%s | Review Top Companies",
+    default: homeSeo.metaTitle,
+    template: `%s | ${siteName}`,
   },
-  description:
-    "Explore company reviews and practical comparisons across gold, mortgages, banking, credit, investing, and legal services. Find your next step with clarity.",
+  description: homeSeo.metaDescription,
   robots: pageRobots("/"),
+  referrer: "strict-origin-when-cross-origin",
+  formatDetection: { telephone: false },
   openGraph: {
-    siteName: "Review Top Companies",
+    siteName,
     type: "website",
     locale: "en_US",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
   icons: {
     icon: [
@@ -71,15 +82,8 @@ export default function RootLayout({
       className={`${inter.variable} ${serif.variable}`}
     >
       <body>
-        <StructuredData
-          data={{
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Review Top Companies",
-            url: siteSettings.origin,
-            logo: siteUrl("/brand/logo.png"),
-          }}
-        />
+        <StructuredData data={organizationSchema()} />
+        <StructuredData data={websiteSchema()} />
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>

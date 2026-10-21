@@ -34,6 +34,8 @@ const knownPaths = new Set([
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname.replace(/\/$/, "") || "/";
   if (knownPaths.has(pathname)) return NextResponse.next();
+  if (pathname.startsWith("/og/") && knownPaths.has(pathname.slice(3)))
+    return NextResponse.next();
   // Decide the status before the partially prerendered app shell starts streaming.
   return NextResponse.rewrite(new URL("/404", request.url), { status: 404 });
 }

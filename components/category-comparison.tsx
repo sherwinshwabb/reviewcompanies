@@ -3,6 +3,7 @@ import { useState } from "react";
 import { goldPaidPlacement } from "@/lib/commercial";
 import Link from "next/link";
 import { Category, Provider } from "@/lib/catalog";
+import { categorySeoFor, lowerFirst, outboundRel } from "@/lib/seo";
 import { ProviderLogo } from "./ui";
 import { Icon } from "./icons";
 import { CompareButton, useComparison } from "./comparison-context";
@@ -18,6 +19,7 @@ export function CategoryComparison({
   const [sort, setSort] = useState("featured");
   const { message } = useComparison();
   const legal = ["personal-injury", "lemon-law"].includes(category.id);
+  const seo = categorySeoFor(category);
   const visible = providers
     .filter((p) => filter === "All companies" || p.type === filter)
     .toSorted((a, b) => (sort === "name" ? a.name.localeCompare(b.name) : 0));
@@ -95,7 +97,9 @@ export function CategoryComparison({
                   ) : (
                     <span className="eyebrow">A CLOSER LOOK</span>
                   )}
-                  <h3 className="provider-verdict">{p.fit}</h3>
+                  <h3 className="provider-verdict">
+                    Best for {lowerFirst(seo.bestFor[p.id] || p.fit)}
+                  </h3>
                   <dl className="provider-facts">
                     <div>
                       <dt>{legal ? "Coverage" : "Service"}</dt>
@@ -118,7 +122,7 @@ export function CategoryComparison({
                     className="button"
                     href={p.domain}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel={outboundRel(p.id)}
                   >
                     Visit{" "}
                     {p.name === "Augusta Precious Metals" ? "Augusta" : p.name}{" "}

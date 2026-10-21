@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { categories } from "@/lib/catalog";
 import { Brand, Icon } from "./icons";
 import { categoryDisplayName } from "./ui";
+import { categoryLabel } from "@/lib/seo";
 export function Header() {
   const [menu, setMenu] = useState(false);
   const pathname = usePathname();
@@ -87,7 +88,7 @@ export function Header() {
                 {categories.map((c) => (
                   <Link key={c.id} href={c.path} onClick={() => setMenu(false)}>
                     <Icon name={c.icon} size={19} />
-                    {c.title}
+                    {categoryLabel(c)}
                   </Link>
                 ))}
               </div>

@@ -6,6 +6,7 @@ import { useComparison } from "./comparison-context";
 import { ProviderLogo } from "./ui";
 import { Icon } from "./icons";
 import { providers, categories, Provider } from "@/lib/catalog";
+import { categoryLabel } from "@/lib/seo";
 export function ComparePage() {
   const { selected, toggle, clear, message } = useComparison();
   const [category, setCategory] = useState("gold");
@@ -35,7 +36,7 @@ export function ComparePage() {
           >
             {categories.map((c) => (
               <option key={c.id} value={c.id}>
-                {c.title}
+                {categoryLabel(c)}
               </option>
             ))}
           </select>
